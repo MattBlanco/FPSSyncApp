@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FPSSyncApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FPS Sync" Height="450" Width="800">
     <Grid>
-        
-    </Grid>
+        <Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Close"/>
+                <MenuItem Header="_Save"/>
+            </MenuItem>
+            <MenuItem Header="_Edit"/>
+            <MenuItem Header="_Help"/>
+        </Menu>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="404,168,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="392,189,0,0" VerticalAlignment="Top" Width="75"/>
+            <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="396,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.273,0.425"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="269,168,0,0" TextWrapping="Wrap" Text="Path" VerticalAlignment="Top"/>
+            <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Margin="257,189,0,0" VerticalAlignment="Top" Width="75" Click="button_Copy_Click"/>
+            <CheckBox x:Name="checkBox_Copy" Content="CheckBox" HorizontalAlignment="Left" Margin="261,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.273,0.425"/>
+        <Button x:Name="sync_button" Content="Sync" HorizontalAlignment="Left" Margin="624,294,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
 </Window>
