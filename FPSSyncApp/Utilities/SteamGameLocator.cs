@@ -6,7 +6,7 @@ using Microsoft.Win32;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace FPSSyncApp
+namespace FPSSyncApp.Utilities
 {
     /// <summary>
     ///  Used to find folder for specified game
