@@ -45,14 +45,35 @@ namespace FPSSyncApp
             return library;
         }
 
-        public static string gameFolder()
+        public static string gameFolder(string gameName)
         {
             var appFolders = GetLibraryFolders().Select(x => x + "\\SteamApps\\common");
             foreach (var folder in appFolders)
             {
                 try
                 {
-                    var matches = Directory.GetDirectories(folder, "TEKKEN 7");
+                    var matches = Directory.GetDirectories(folder,  gameName);
+                    if (matches.Length >= 1)
+                    {
+                        return matches[0];
+                    }
+                }
+                catch (DirectoryNotFoundException)
+                {
+                    //continue;
+                }
+            }
+            return null;
+        }
+
+        public static string valvegameFolder(string gameName)
+        {
+            var appFolders = GetLibraryFolders().Select(x => x + "\\SteamApps\\common");
+            foreach (var folder in appFolders)
+            {
+                try
+                {
+                    var matches = Directory.GetDirectories(folder, gameName);
                     if (matches.Length >= 1)
                     {
                         return matches[0];

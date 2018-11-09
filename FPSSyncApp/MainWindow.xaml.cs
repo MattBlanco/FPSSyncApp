@@ -30,7 +30,7 @@ namespace FPSSyncApp
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            textBlock.Text = SteamGameLocator.gameFolder();
+            textBlock.Text = SteamGameLocator.gameFolder("TEKKEN 7");
         }
     }
 }
